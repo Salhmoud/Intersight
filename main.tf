@@ -1,5 +1,6 @@
-required_providers {
-intersight = {
+terraform {
+  required_providers {
+    intersight = {
     source  = "CiscoDevNet/intersight"
     		    }
   		  }
@@ -12,7 +13,7 @@ provider "intersight" {
 }
 
 resource "intersight_ntp_policy" "ntp_policy" {
-  name        = "tf_cloud_demo2"
+  name        = "tf_cloud_demo"
   description = "Policy Created using no variables"
   enabled     = true
   ntp_servers = ["1.1.1.1", "2.2.2.4"]
